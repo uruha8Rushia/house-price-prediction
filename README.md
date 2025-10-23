@@ -7,7 +7,7 @@ This repository contains a lightweight Flask frontend that sends JSON to a model
 ## Contents
 
 - `app.py` - Flask application and the `HousePricePredictor` wrapper that loads the joblib artifact and serves prediction endpoints.
-- `data.csv` - Dataset used for training and analysis.
+- `data.csv` - Dataset from [https://www.kaggle.com/datasets/shree1992/housedata](https://www.kaggle.com/datasets/shree1992/housedata) used for analysis and training.
 - `hpp.ipynb` - Jupyter notebook used for EDA and model training.
 - `static/` - Static files for the web frontend (`style.css`, `script.js`).
 - `templates/index.html` - HTML template used by the Flask app.
