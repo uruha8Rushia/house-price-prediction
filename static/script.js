@@ -55,12 +55,10 @@ document.getElementById("predict-form").addEventListener("submit", async (e) => 
     // Show result card
     if (result.prediction !== undefined && result.prediction !== null) {
       const priceElement = document.getElementById("price");
-      const rawElement = document.getElementById("raw");
       const card = document.getElementById("result-card");
 
       card.classList.remove("d-none");
-      priceElement.textContent = `RM ${Intl.NumberFormat().format(result.prediction)}`;
-      rawElement.textContent = `Raw Value: ${result.prediction}`;
+      priceElement.textContent = `$ ${Intl.NumberFormat().format(result.prediction)}`;
     }
   } catch (err) {
     alert("An error occurred: " + err.message);
