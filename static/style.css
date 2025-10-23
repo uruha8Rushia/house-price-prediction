@@ -1,0 +1,64 @@
+/* Global page adjustments */
+body {
+  background: #121212;
+  font-family: "Inter", Arial, sans-serif;
+  color: #e5e5e5;
+}
+
+/* Card styling */
+.card {
+  border-radius: 12px;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+/* Input fields */
+.form-control, .form-select {
+  background: #1c1c1c;
+  color: #e5e5e5;
+  border: 1px solid #333;
+}
+
+.form-control:focus, .form-select:focus {
+  background: #1c1c1c;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, .3);
+  color: #fff;
+}
+
+/* Predict button */
+#predict-btn {
+  padding: 10px 28px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Result card */
+#result-card {
+  border: 1px solid #333;
+  border-radius: 12px;
+}
+
+#price {
+  color: #4cd964; /* Green Apple Accent */
+  font-weight: 700;
+}
+
+/* Advanced collapsible panel */
+#advanced .card {
+  border-radius: 10px;
+  border: 1px solid #444;
+}
+
+/* Hover effect for optional inputs */
+#advanced input:hover {
+  background: #222;
+}
+
+/* Small text */
+.text-muted {
+  color: #999 !important;
+}
