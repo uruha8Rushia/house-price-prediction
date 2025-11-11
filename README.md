@@ -11,14 +11,25 @@ This repository contains a lightweight Flask frontend that sends JSON to a model
 - `hpp.ipynb` - Jupyter notebook used for EDA and model training.
 - `static/` - Static files for the web frontend (`style.css`, `script.js`).
 - `templates/index.html` - HTML template used by the Flask app.
-- `myenv/` - Python virtual environment included in the workspace.
 
 ## Setup
+
+Create a virtual environment:
+
+```powershell
+python -m venv myenv
+```
 
 Activate the virtual environment:
 
 ```powershell
 myenv\Scripts\activate
+```
+
+Install the packages
+
+```powershell
+pip install -r requirements.txt
 ```
 
 ### Run the app

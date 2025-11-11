@@ -40,7 +40,7 @@ def _make_json_serializable(obj):
 from flask import Flask, request, jsonify, render_template
 
 class HousePricePredictor:
-    def __init__(self, model_path='house_price_prediction_model.pkl'):
+    def __init__(self, model_path='model/house_price_prediction_model.pkl'):
         self.artifact = joblib.load(model_path)
         self.model = self.artifact['model']
         self.features = self.artifact['features']
