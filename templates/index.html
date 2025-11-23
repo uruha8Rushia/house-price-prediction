@@ -28,8 +28,8 @@
                   </div>
 
                   <div class="col-md-3">
-                    <label class="form-label">Bathrooms</label>
-                    <input required name="bathrooms" type="number" step="1" min="0" class="form-control" value="2">
+                      <label class="form-label">Full Bathrooms</label>
+                      <input name="bathroom_full" type="number" step="1" min="0" class="form-control" value="2">
                   </div>
 
                   <div class="col-md-3">
@@ -54,16 +54,28 @@
                       <div class="card card-body bg-dark text-light">
                         <div class="row g-3">
                           <div class="col-md-3">
-                            <label class="form-label">Floors</label>
-                            <input name="floors" type="number" step="1" max="4" class="form-control">
+                            <label class="form-label">Half Bathrooms</label>
+                            <input name="bathroom_half" type="number" step="1" min="0" max="1" class="form-control">
                           </div>
+
                           <div class="col-md-3">
-                            <label class="form-label">Waterfront </label>
+                            <label class="form-label">Quarter Bathrooms</label>
+                            <input name="bathroom_quarter" type="number" step="1" min="0" max="1" class="form-control">
+                          </div>
+
+                          <div class="col-md-3">
+                            <label class="form-label">Floors</label>
+                            <input name="floors" type="number" step="0.5" max="4" class="form-control">
+                          </div>
+
+                          <div class="col-md-3">
+                            <label class="form-label">Waterfront (0/1)</label>
                             <input name="waterfront" type="number" step="1" min="0" max="1" class="form-control">
                           </div>
+
                           <div class="col-md-3">
                             <label class="form-label">View</label>
-                            <input name="view" type="number" step="1" min="0" max="5" class="form-control">
+                            <input name="view" type="number" step="1" min="0" max="4" class="form-control">
                           </div>
 
                           <div class="col-md-3">
@@ -93,7 +105,7 @@
 
                           <div class="col-md-3">
                             <label class="form-label">Renovated (0/1)</label>
-                            <input name="renovated" type="number" step="1" min="0" max="1" class="form-control">
+                            <input name="has_renovated" type="number" step="1" min="0" max="1" class="form-control">
                           </div>
 
                         </div>
