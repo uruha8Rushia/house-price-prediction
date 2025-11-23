@@ -50,6 +50,8 @@ class HousePricePredictor:
         self.continuous_scaler = self.artifact['continuous_scaler']
         self.default_input = self.artifact['default_input']
         self.default_city = self.artifact['default_city']
+        self.city_columns = [c for c in self.features if c.startswith('city_')]
+        self.non_city_columns = [c for c in self.features if not c.startswith('city_')]
     
     def prepare_input(self, input_data):
         # create a DataFrame with default values
@@ -71,20 +73,21 @@ class HousePricePredictor:
         return input_df[self.features]
     
     def preprocess_input(self, input_data):
-        input_df = self.prepare_input(input_data)
-        
+        input_df = self.prepare_input(input_data).copy()
+
         # scale discrete features
-        input_df[discrete_cols] = discrete_scaler.transform(input_df[discrete_cols])
-        
+        input_df[self.discrete_features] = self.discrete_scaler.transform(input_df[self.discrete_features])
+
         # scale continuous features
-        input_df[continuous_cols] = continuous_scaler.transform(input_df[continuous_cols])
-        
+        input_df[self.continuous_features] = self.continuous_scaler.transform(input_df[self.continuous_features])
+
         return input_df
     
     def predict(self, input_data):
         processed_input = self.preprocess_input(input_data)
         predicted_price = self.model.predict(processed_input)
-        return predicted_price[0]
+        # return a JSON-serializable float
+        return float(predicted_price[0])
 
 
 # ------------------ FLASK APP ------------------
